@@ -1,0 +1,47 @@
+.about{
+  position: relative;
+  height: 100vh;
+  padding-top: 109px;
+
+
+  .about_box{
+    max-width: 640px;
+    margin: 50px auto 0;
+    opacity: 1;
+
+    .about_title{
+      width: 210px;
+      font-size: 1.46em;
+      font-family: 'superclarendon', sans-serif;
+      font-weight: bold;
+      color: $blackColor;
+      span{
+        margin-left: 20px;
+        font-size: 0.6rem;
+        font-family: 'Georgia', sans-serif;
+        font-weight: normal;
+        color: $blackColor;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+      }
+
+      .about_title_line{
+        border-top: 2px solid $blackColor;
+      }
+
+    }//end about_title
+
+    .about_text{
+      margin: 60px 0 75px 0;
+
+      h2{
+        font-size: 3.5em;
+        font-style: italic;
+        color: $blackColor;
+      }
+      p{color: $blackColor;}
+    }//end about text
+
+  }//end about box
+
+}//end about

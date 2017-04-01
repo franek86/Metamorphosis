@@ -1,0 +1,122 @@
+.chapters{
+  height: 100vh;
+  background-color: $liteGrayColor;
+  padding: 80px 0 45px 0;
+
+  .chapter_header{
+    width: 75px;
+    border: 3px solid #ddd;
+    text-align: center;
+    margin-bottom: 90px;
+
+    h3{
+      font-size: 2.2em;
+      font-family: 'superclarendon', sans-serif;
+      font-weight: bold;
+    }
+
+    h6{
+      font-weight: bold;
+      font-style: italic;
+    }
+
+  }// end chapter_header
+
+  .chapter_box{
+    max-width: 720px;
+    margin: 0 auto;
+
+    .chapter_text{
+      width: 630px;
+      max-height: 500px;
+      overflow-y: auto;
+
+      h2{
+        font-size: 4.12em;
+        font-family: 'superclarendon', sans-serif;
+        font-weight: bold;
+        color: $blackColor;
+        margin-bottom: 30px;
+      }
+
+      .chapter_text_header{
+        font-size: 1.25em;
+        font-style: italic;
+        color: #8d8d8d;
+      }
+
+    }//end chapter_box
+
+  }//end chapter_box
+
+  ::-webkit-scrollbar-track{
+    width: 1px;
+  	border-radius: 10px;
+  	background-color: #e1e1e1;
+  }
+
+  ::-webkit-scrollbar{
+  	width: 5px;
+  	background-color: #e1e1e1;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    width: 5px;
+  	border-radius: 10px;
+  	-webkit-box-shadow: inset 0 0 20px rgba(0,0,0,.3);
+  	background-color: #969696;
+  }
+
+  .chapters_indicators{
+
+    .prev,
+    .next{
+      .page_num_box{
+        display: block;
+
+        .page_num{
+          display: inline;
+          font-size: 1.12em;
+          font-family: 'superclarendon', sans-serif;
+          font-weight: bold;
+          color: $blackColor;
+        }
+
+        p{
+          font-size: 0.9em;
+          font-style: italic;
+          color: $grayColor;
+        }
+
+      }//end page_num
+
+    }//end next end prev
+
+    .next_icon,
+    .prev_icon{
+      fill: $darkGrayColor;
+    }
+
+    .next{
+      margin-right: 60px;
+      .next_icon{
+        transform: rotate(-90deg);
+      }
+      .page_num_box{
+          transform: translate(-35px, -28px);
+      }
+    }//end next
+
+    .prev{
+      margin-left: 80px;
+      .prev_icon{
+        transform: rotate(90deg);
+      }
+      .page_num_box{
+          transform: translate(40px, -35px);
+      }
+    }//end prev
+
+  }//end chapter_header
+
+}//end chapters

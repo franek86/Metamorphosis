@@ -1,0 +1,90 @@
+/*
+  Medium devices (tablets and dekstops 768px to 922px)
+*/
+@media(min-width: $breakpointTablet) and (max-width: $breakpointDesktop){
+
+  .contact{
+    .contact_wrapper{
+
+      .contact_info{
+        padding-top: 40px;
+        text-align: center;
+
+        &.pull-right{
+          float: none !important;
+        }
+
+      }//end contact_info
+
+    }// end contact_wrapper
+
+  }// end contact
+
+
+
+
+}
+
+
+
+/*
+  Small devices (mobile, to 768px)
+*/
+@media(max-width: 767px){
+
+  .contact{
+
+    header{
+
+      .header_menu_icon{
+        left: 10px;
+      }
+
+      .contact_title_center{
+        margin-top: 25px;
+
+        h3{
+          font-size: 1.5em;
+        }
+
+      }//end contact_title_center
+
+      .contact_header_icons{
+        margin: 15px 0px 0 0;
+        img{
+          height: 15px;
+        }
+
+      }//end contact_header_icons
+
+    }//end header
+
+    .contact_wrapper{
+
+      .contact_info{
+        padding-top: 40px;
+        text-align: center;
+
+        &.pull-right{
+          float: none !important;
+        }
+
+      }
+
+      #conatact_form{
+        text-align: center;
+
+        .error{
+          margin-left: 40px;
+        }
+
+      }//end conatact_form
+
+    }//end contact_wrapper
+
+  }//end contact
+
+  
+
+
+}

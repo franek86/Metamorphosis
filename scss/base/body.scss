@@ -1,0 +1,124 @@
+*{
+  box-sizing: border-box;
+}
+
+html,
+body{
+  position: relative;
+  font-size: 15px;
+  font-family: 'Georgia', sans-serif;
+  font-weight: normal;
+  line-height: 1.6;
+  overflow-x: hidden;
+
+  li,ul,ol{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a{
+    text-decoration: none;
+    color: $whiteColor;
+
+    &:hover{
+      text-decoration: none;
+      color: $grayColor;
+    }
+  }
+
+  .container-fluid{
+    height: 100%;
+  }
+
+
+  .header_menu_icon{
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    left:80px;
+    z-index: 100;
+
+    .menu_icon{
+      display: inline-block;
+      width: 30px;
+      align-items: center;
+
+      span,
+      span:before,
+      span:after{
+        content: "";
+        padding: 0;
+        position: relative;
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: $whiteColor;
+      }
+
+      span:before{
+        top: 11px;
+      }
+      span:after{
+          top: -15px;
+      }
+
+      &.open span{
+        background: transparent;
+      }
+
+      &.open span:before,
+      &.open span:after{
+        transform-origin: center;
+        transform: rotate(-45deg) translate(2px, -4px);
+        top: 0;
+      }
+
+      &.open span:before{
+        transform: rotate(45deg) translate(-1px, 0px);
+      }
+
+    }
+
+    span{
+      font-size: 0.8em;
+      font-weight: normal;
+      color: $whiteColor;
+      padding: 0 10px;
+    }
+
+  }// end header-menu-icon
+
+  .header_social_icons{
+    margin-top: 50px;
+    li{
+      display: inline-block;
+      padding-left: 10px;
+      cursor: pointer;
+    }
+
+    .hidden_icon{
+      opacity: 0;
+    }
+  }//end header_social_icons
+
+  .btn{
+    width: 230px;
+    padding: 10px 40px;
+    font-size: 0.73em;
+    text-transform: uppercase;
+    text-align: center;
+    color: $blackColor;
+    border: 1px solid $blackColor;
+    transition: all .2s ease-in;
+
+    &:hover{
+      background-color: #111111;
+      color: $whiteColor;
+    }
+  }//end btn
+
+
+}// end body

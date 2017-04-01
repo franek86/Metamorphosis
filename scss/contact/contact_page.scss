@@ -1,0 +1,119 @@
+.contact{
+
+  .menu_wrapper{
+    height: 100vh;
+    position: fixed;
+  }
+
+  h2{
+    font-family: 'superclarendon', sans-serif;
+    font-size: 4.5em;
+    font-weight: bold;
+    color: $blackColor;
+    padding: 135px 0 75px 0;
+  }
+
+  header{
+    width: 100%;
+    height: 135px;
+    background-image: url('/images/bg-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .contact_title_center{
+      margin: 50px auto 0 auto;
+      text-align: center;
+
+      h3{
+        font-family: 'superclarendon', sans-serif;
+        font-size: 2.4em;
+        font-weight: bold;
+        color: $whiteColor;
+        margin:0;
+      }
+
+    }// end contact_title_center
+
+    .contact_header_icons{
+      margin: 60px 60px 0 0;
+    }
+
+  }//end header
+
+  .contact_wrapper{
+
+    #conatact_form{
+      input[type="email"],
+      input[type="text"],
+      input[type="tel"]{
+        display: block;
+        width: 100%;
+        padding: 20px;
+        color: $blackColor;
+        outline: none;
+        margin-bottom: 50px;
+        border: 1px solid $blackColor;
+      }
+
+      textarea{
+        display: block;
+        width: 100%;
+        min-height: 250px;
+        outline: none;
+        border: 1px solid $blackColor;
+      }
+
+      label{
+        font-size: 1.2em;
+        font-weight: normal;
+        color: $blackColor;
+      }
+
+      .error{
+        margin-left: 100px;
+        font-size: 1em;
+        font-weight: normal;
+        color: #d92929;
+      }
+
+      .btn{
+        margin-top: 60px;
+      }
+
+    }
+
+  }// end contact_wrapper
+
+  .contact_info{
+
+    a{
+      font-size: 1.2em;
+      color: $grayColor;
+    }
+
+  }//end contact_info
+
+  .contact_map{
+
+    .contact_map_header{
+      padding: 150px 0 60px 0;
+
+      h2{
+        padding: 0;
+        margin: 0;
+        font-size: 1.2em;
+      }
+
+      .get_direction{
+        display: block;
+        color: $blackColor;
+        font-family: 'superclarendon', sans-serif;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+
+    }
+
+  }// end contact_map
+
+}//end contact

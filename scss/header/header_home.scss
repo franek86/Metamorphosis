@@ -1,0 +1,134 @@
+.header_home{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-left: 80px;
+  padding-right: 80px;
+  background-image: url('/images/bg-image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: $whiteColor;
+
+  /*=============== HEADER-TOP ====================*/
+  .header_top{
+    position: relative;
+    padding-top: 60px;
+
+    // .header-menu-icon,
+    .header_chapters_icon{
+      display: inline-block;
+      cursor: pointer;
+
+      img{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      span{
+        font-size: 0.8em;
+        font-weight: normal;
+        color: $whiteColor;
+        padding: 0 10px;
+      }
+
+    }// end header-menu-icon header-chapters-icon
+
+  }// end header-top
+
+  /*=============== HEADER-CENTER ====================*/
+  .header_center{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    text-align: center;
+    margin: 0 auto;
+    transform: translate(-50%);
+
+    .header_center_big{
+      font-family: 'superclarendon', sans-serif;
+      font-weight: bold;
+      font-size: 8.46em;
+
+    }
+
+    .header_center_content{
+      width: 600px;
+      padding: 35px 0 55px 0;
+      font-size:  1.4em;
+      margin: 0 auto;
+
+      span{
+        font-weight: bold;
+        font-style: italic;
+      }
+    }
+
+  }//end header-center
+
+  /*=============== HEADER-BOTTOM ====================*/
+  .header_bottom{
+    position: absolute;
+    bottom: 50px;
+    left: 95px;
+    right: 95px;
+
+
+    .header_bottom_copyright{
+      width: 150px;
+      transform-origin: 0;
+      color: $grayColor;
+      transform: rotate(-90deg) translateX(-70px);
+      font-size: 0.73em;
+      line-height: 0.8;
+
+      :nth-child(2){
+        font-style: italic;
+      }
+
+    }// end header-bottom-copyright
+
+    .header_bottom_scroll{
+      height: 50px;
+      font-size: 0.8em;
+      text-align: center;
+      margin-top: 23px;
+
+
+      span{
+        display: block;
+        width: 40px;
+        height: 20px;
+        margin: 0 auto;
+        background-image: url('/images/arrow.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+      }
+
+      &:hover{
+          animation: bounceArrow 2s linear infinite;
+      }
+
+    }// end header-bottom-scroll
+
+
+
+  }// header_bottom
+
+}// header-home
+
+
+@keyframes bounceArrow {
+	0% {
+    transform: translateY(0);
+  }
+	40% {
+    transform: translateY(-30px);
+  }
+	60% {
+    transform: translateY(-15px);
+  }
+}

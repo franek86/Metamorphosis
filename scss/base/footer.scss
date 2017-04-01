@@ -1,0 +1,22 @@
+footer{
+  text-align: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h5{
+    font-size: 0.9em;
+    font-family: 'superclarendon', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: translateY(50%);
+    span{
+      font-size: 1.16em;
+      font-family: 'Georgia', sans-serif;
+      font-weight: normal;
+      font-style: italic;
+      text-transform: lowercase;
+    }
+  }
+}// end footer
