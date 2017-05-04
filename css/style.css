@@ -7352,12 +7352,14 @@ footer {
   border: 1px solid #000000; }
 
 .contact .contact_wrapper #conatact_form label {
+  width: 100%;
   font-size: 1.2em;
   font-weight: normal;
   color: #000000; }
 
 .contact .contact_wrapper #conatact_form .error {
-  margin-left: 100px;
+  display: inline-block;
+  float: right;
   font-size: 1em;
   font-weight: normal;
   color: #d92929; }

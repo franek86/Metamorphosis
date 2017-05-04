@@ -49,13 +49,15 @@
       }
 
       //animacije startaju sa pozicije x -400px, s odgodom od svakih 100ms, dok zavrsava sa X-pozicijom po default u css-u
-      TweenMax.from(menuItems1, 1.5, {x: -400,  ease:Expo.easeOut, delay: 0.35});
-      TweenMax.from(menuItems2, 1.5, {x: -400,  ease:Expo.easeOut, delay: 0.45});
-      TweenMax.from(menuItems3, 1.5, {x: -400,  ease:Expo.easeOut, delay: 0.55});
-      TweenMax.from(menuItems4, 1.5, {x: -400,  ease:Expo.easeOut, delay: 0.65});
-      TweenMax.from(menuBottomTitle, 1.5, {x: -400,  ease:Expo.easeOut, delay: 0.75});
-      TweenMax.from(menuIcons, 1.5, {x: -400,  ease:Expo.easeOut, delay: 0.85});
-      TweenMax.from(menuBottomText, 1.5, {x: -400,  ease:Expo.easeOut, delay: 0.95});
+      TweenMax.fromTo(menuItems1, 1.5, {autoAlpha: 0, x: -400}, {autoAlpha: 1, x:0, ease:Expo.easeOut});
+      TweenMax.fromTo(menuItems2, 1.5, {autoAlpha: 0, x: -400}, {autoAlpha: 1, x:0, ease:Expo.easeOut});
+      TweenMax.fromTo(menuItems3, 1.5, {autoAlpha: 0, x: -400}, {autoAlpha: 1, x:0, ease:Expo.easeOut});
+      TweenMax.fromTo(menuItems4, 1.5, {autoAlpha: 0, x: -400}, {autoAlpha: 1, x:0, ease:Expo.easeOut});
+      TweenMax.fromTo(menuBottomTitle, 1.5, {autoAlpha: 0, x: -400}, {autoAlpha: 1, x:0, ease:Expo.easeOut});
+      TweenMax.fromTo(menuIcons, 1.5, {autoAlpha: 0, x: -400}, {autoAlpha: 1, x:0, ease:Expo.easeOut});
+      TweenMax.fromTo(menuBottomText, 1.5, {autoAlpha: 0, x: -400}, {autoAlpha: 1, x:0, ease:Expo.easeOut});
+
+
   }
 
   headerMenu.on('click', function(){
