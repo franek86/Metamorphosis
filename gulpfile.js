@@ -42,6 +42,7 @@ gulp.task('uglifyJS', function(){
     vendorPath+'/jquery.js',
     // vendorPath+'/bootstrap.js',
     vendorPath+'/TweenMax.js',
+    vendorPath+'/TimelineLite.js',
     vendorPath+'/CSSPlugin.js',
     vendorPath+'/ScrollMagic.js',
     vendorPath+'/animation.gsap.js',

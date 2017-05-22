@@ -44,40 +44,57 @@ body{
     .menu_icon{
       display: inline-block;
       width: 30px;
-      align-items: center;
+      height: 15px;
+      position: relative;
+      transform: rotate(0deg);
+      transition: .5s ease-in-out;
+      opacity: 1;
+      cursor: pointer;
 
-      span,
-      span:before,
-      span:after{
-        content: "";
-        padding: 0;
-        position: relative;
+      span{
         display: block;
-        height: 4px;
+        position: absolute;
+        height: 3px;
         width: 100%;
-        background-color: $whiteColor;
+        background: $whiteColor;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+        cursor: pointer;
+
+        &:nth-child(1){
+          top: 0px;
+        }
+        &:nth-child(2),
+        &:nth-child(3){
+          top: 8px;
+        }
+        &:nth-child(4){
+          top: 16px;
+        }
       }
 
-      span:before{
-        top: 11px;
-      }
-      span:after{
-          top: -15px;
+
+      &.open span:nth-child(1){
+        display: none;
+        top: 18px;
+        width: 0%;
+        left: 50%;
       }
 
-      &.open span{
-        background: transparent;
+      &.open span:nth-child(2){
+        transform: rotate(45deg);
       }
 
-      &.open span:before,
-      &.open span:after{
-        transform-origin: center;
-        transform: rotate(-45deg) translate(2px, -4px);
-        top: 0;
+      &.open span:nth-child(3){
+        transform: rotate(-45deg);
       }
 
-      &.open span:before{
-        transform: rotate(45deg) translate(-1px, 0px);
+      &.open span:nth-child(4){
+        display: none;
+        top: 18px;
+        width: 0%;
+        left: 50%;
       }
 
     }

@@ -65,16 +65,17 @@
         .author_photo{
           text-align: center;
           margin-top: 50%;
-          transform: translateY(-50%);
         }
         .slide_text{
+          margin-top: 45px;
           color: $whiteColor;
           text-align: justify;
 
           p{
-            line-height: 1.9;
+            line-height: 25px;
             span{
-              font-size: 3.3em;
+              font-size: 4.3em;
+              margin-right: 6px;
             }
           }
 

@@ -1,77 +1,73 @@
 (function(){
 
-    var headerHome                            = $('.header-home'),
-          headerMenu                            = $('.menu_icon'),
-          headerDivider                          = $('.header_center_devider'),
-          centerBigHeader                      = $('.header_center_big'),
-          centerContentHeader               = $('.header_center_content'),
-          chapeterIcon                           = $('.header_chapters_icon'),
-          scrollIconHeader                      = $('.header_bottom_scroll'),
-          shareIcon                                = $('.share_icon'),
-          menuWrapper                          = $('.menu_wrapper'),
-          menu                                      = $('.menu'),
-          menuItems1                             = $('.menu_items li:nth-child(1)'),
-          menuItems2                             = $('.menu_items li:nth-child(2)'),
-          menuItems3                             = $('.menu_items li:nth-child(3)'),
-          menuItems4                             = $('.menu_items li:nth-child(4)'),
-          menuBottomTitle                       = $('.menu_bottom_title'),
-          menuIcons                               = $('.menu_icons'),
-          menuBottomText                       = $('.menu_bottom_text'),
-          popUp                                       = $('.popup'),
-          aboutSlide                                = $('.about_slide'),
-          animateSlide                            =$('.animate_slide'),
-          controllerMagicScroll                 = new ScrollMagic.Controller();
+    var headerHome              = $('.header-home'),
+          headerMenu            = $('.header_menu_icon')
+          headerMenuIcon        = $('.menu_icon'),
+          headerDivider         = $('.header_center_devider'),
+          centerBigHeader       = $('.header_center_big'),
+          centerContentHeader   = $('.header_center_content'),
+          chapeterIcon          = $('.header_chapters_icon'),
+          scrollIconHeader      = $('.header_bottom_scroll'),
+          shareIcon             = $('.share_icon'),
+          menuWrapper           = $('.menu_wrapper'),
+          menu                  = $('.menu'),
+          menuItems             = $('.menu_items li'),
+          menuBottomTitle       = $('.menu_bottom_title'),
+          menuIcons             = $('.menu_icons'),
+          menuBottomText        = $('.menu_bottom_text'),
+          popUp                 = $('.popup'),
+          aboutSlide            = $('.about_slide'),
+          animateSlide          =$('.animate_slide'),
+          tl                    = new TimelineLite(),
+          controllerMagicScroll = new ScrollMagic.Controller();
 
 
   /*
     animacije u headeru startaju sa y-pozicije, opacity je na nuli, dok zavrsava sa y-pozicijom i opacity po default u css-u
   */
-  TweenMax.from(headerHome, 1, {y: 1000,  ease:Expo.easeOut});
-  TweenMax.from(headerMenu, 2.2, {y: 200, autoAlpha:0, ease:Expo.easeOut, delay: 0.3});
-  TweenMax.from(headerDivider, 2.2, {y: 200, autoAlpha:0, ease:Expo.easeOut, delay: 0.4});
-  TweenMax.from(centerBigHeader, 2.2, {y: 200, autoAlpha:0, ease:Expo.easeOut, delay: 0.65});
-  TweenMax.from(centerContentHeader, 2.2, {y: 500, autoAlpha:0, ease:Expo.easeOut, delay: 0.8});
-  TweenMax.from(chapeterIcon, 2.2, {y: 500, autoAlpha:0, ease:Expo.easeOut, delay: 0.8});
-  TweenMax.from(scrollIconHeader, 2.2, {y: 200, autoAlpha:0, ease:Expo.easeOut, delay: 0.95});
-  TweenMax.from(shareIcon, 2.2, {y: 200, autoAlpha:0, ease:Expo.easeOut, delay: 0.95});
+  tl.from(headerHome, 0.4, {y: 1000,  ease:Sine.easeOut})
+    .from(headerMenu, 0.55, {y: 200, autoAlpha:0, ease:Sine.easeOut})
+    .from(headerDivider, 0.55, {y: 200, autoAlpha:0, ease:Sine.easeOut})
+    .from(centerBigHeader, 0.55, {y: 200, autoAlpha:0, ease:Sine.easeOut})
+    .from(centerContentHeader, 0.55, {y: 500, autoAlpha:0, ease:Sine.easeOut})
+    .from(chapeterIcon, 0.55, {y: 500, autoAlpha:0, ease:Sine.easeOut})
+    .from(scrollIconHeader, 0.55, {y: 200, autoAlpha:0, ease:Sine.easeOut})
+    .from(shareIcon, 0.55, {y: 200, autoAlpha:0, ease:Sine.easeOut});
 
 
 
   // klikanjem na menu icon otvora se menu prozor s animacijom
   function openMenu(){
-      var target = headerMenu.hasClass('open'); // target varijabla pohranjuje klasu .menu_icon koja ima klasu .open
-      if(target){// ako je target == true
-        $('.menu_icon, .menu_wrapper').removeClass('open');//ukloni klasu .open
-        $('.menu_icon_text').text('Menu');//dodaj text "Menu"
-      } else {
-        $('.menu_icon, .menu_wrapper').addClass('open');//dodaju klasu .open
-        $('.menu_icon_text').text('Close');// dodaj text "Close"
-      }
 
-      //animacije startaju sa pozicije x -400px, s odgodom od svakih 100ms, dok zavrsava sa X-pozicijom po default u css-u
-      TweenMax.fromTo(menuItems1, 1.5, {autoAlpha: 0, x: -400}, {autoAlpha: 1, x:0, ease:Expo.easeOut});
-      TweenMax.fromTo(menuItems2, 1.5, {autoAlpha: 0, x: -400}, {autoAlpha: 1, x:0, ease:Expo.easeOut});
-      TweenMax.fromTo(menuItems3, 1.5, {autoAlpha: 0, x: -400}, {autoAlpha: 1, x:0, ease:Expo.easeOut});
-      TweenMax.fromTo(menuItems4, 1.5, {autoAlpha: 0, x: -400}, {autoAlpha: 1, x:0, ease:Expo.easeOut});
-      TweenMax.fromTo(menuBottomTitle, 1.5, {autoAlpha: 0, x: -400}, {autoAlpha: 1, x:0, ease:Expo.easeOut});
-      TweenMax.fromTo(menuIcons, 1.5, {autoAlpha: 0, x: -400}, {autoAlpha: 1, x:0, ease:Expo.easeOut});
-      TweenMax.fromTo(menuBottomText, 1.5, {autoAlpha: 0, x: -400}, {autoAlpha: 1, x:0, ease:Expo.easeOut});
+    //animacije startaju sa pozicije x -400px, s odgodom od svakih 100ms, dok zavrsava sa X-pozicijom po default u css-u
+    tl.from(menuBottomTitle, 0.3, {autoAlpha: 0, x: -1000, ease:Expo.easeOut})
+      .from(menuIcons, 0.3, {autoAlpha: 0, x: -1000, ease:Expo.easeOut})
+      .from(menuBottomText, 0.3, {autoAlpha: 0, x: -1000, ease:Expo.easeOut})
+      .staggerFromTo(menuItems, 0.8, {autoAlpha: 0, x: -1000}, {autoAlpha: 1, x:0, ease:Expo.easeOut}, 0.2);
 
+    var target = headerMenuIcon.hasClass('open'); // target varijabla pohranjuje klasu .menu_icon koja ima klasu .open
+    if(target){// ako je target == true
+      $('.menu_icon, .menu_wrapper').removeClass('open');//ukloni klasu .open
+      $('.menu_icon_text').text('Menu');//dodaj text "Menu"
+    } else {
+      $('.menu_icon, .menu_wrapper').addClass('open');//dodaju klasu .open
+      $('.menu_icon_text').text('Close');// dodaj text "Close"
+    }
 
   }
 
-  headerMenu.on('click', function(){
+  headerMenuIcon.on('click', function(){
     openMenu();
   });
 
   //Hoverom preko Share ikone prikazi ostale icone s animacijom
-  shareIcon.mouseover(function(){ //prolaskom misa preko .share_icon
+  shareIcon.click(function(){ //prolaskom misa preko .share_icon
     $(this).css({
       'transform': 'rotate(180deg)', //rotiraj ikonu za 180
       'transition': '0.5s ease-in-out'
     });
     $('.hidden_icon').css({// .hidden_icon dodaj css
-      'transform': 'translateX(0)',
+      'transform': 'translateX(-5px)',
       'opacity': '1',
       'transition': '0.7s ease'
     });
@@ -80,7 +76,7 @@
       'transform': 'rotate(0deg)', //rotiraj ikonu za 0
       'transition': '0.2s ease-in-out'
     });
-    $('.hidden_icon').css({// .hidden_icon dodaj css
+    $('.hidden_icon').css({// .hidden_icon dodaj u css
       'transform': 'translateX(50px)',
       'opacity': '0',
       'transition': '0.25s cubic-bezier(.77,.55,.69,.42)'
@@ -132,6 +128,10 @@
     $('html, body').animate({
         scrollTop: $(".about").offset().top
     }, 2000);
+
+    $(window).scroll(function(){
+      $(".header_home").css("opacity", 1 - $(window).scrollTop() / 1000);
+    });
   }
   $(".header_bottom_scroll").click(function() {
     clickExploreMore();
