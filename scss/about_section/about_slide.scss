@@ -1,4 +1,4 @@
-.about_slide{
+.about_slide {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -8,40 +8,39 @@
   background-color: rgba(0,0,0,0.5);
   transform: translateX(100%);
 
-  h4{
+  h4 {
     font-size: 2.4em;
     font-style: italic;
     color: $whiteColor;
   }
 
-  h6{
+  h6 {
     font-size: 0.86em;
     color: $grayColor;
   }
 
-  .about_slide_box{
+  .about_slide_box {
     position: relative;
     width: 80%;
     height: 80%;
-    left:  60%;
+    left: 60%;
     top: 50%;
     transform: translate(-50%, -50%);
     background: $blackColor;
     overflow: hidden;
     float: left;
 
-
-    .about_slide_close{
-      margin: 30px  0  0 30px;
+    .about_slide_close {
+      margin: 30px 0 0 30px;
     }
 
-    .slide_arrow{
+    .slide_arrow {
       height: 100%;
       width: 160px;
       background-color: $liteBlack;
       text-align: center;
 
-      img{
+      img {
         position: absolute;
         top: 50%;
         width: 50px;
@@ -49,10 +48,10 @@
         transform: rotate(-90deg);
         cursor: pointer;
       }
-    }// end slide_arrow
+    }
+    // end slide_arrow
 
-
-    .slider{
+    .slider {
       position: relative;
       width: 600px;
       height: 420px;
@@ -60,32 +59,33 @@
       float: left;
       top: 50%;
       transform: translateY(-50%);
-      .slide{
 
-        .author_photo{
+      .slide {
+        .author_photo {
           text-align: center;
           margin-top: 50%;
         }
-        .slide_text{
+
+        .slide_text {
           margin-top: 45px;
           color: $whiteColor;
           text-align: justify;
 
-          p{
+          p {
             line-height: 25px;
-            span{
+
+            span {
               font-size: 4.3em;
               margin-right: 6px;
             }
           }
-
-        }//end slide_text
-
-      }// end slide
-
-    }// end slider
-
-
-  }//end about-slide-box
-
-}//end about-slide
+        }
+        //end slide_text
+      }
+      // end slide
+    }
+    // end slider
+  }
+  //end about-slide-box
+}
+//end about-slide

@@ -1,4 +1,4 @@
-.menu_wrapper{
+.menu_wrapper {
   position: absolute;
   width: 240px;
   height: 100%;
@@ -7,9 +7,9 @@
   background-color: transparentize(#000, .5);
   z-index: 2;
   transform: translateX(-100%);
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 
-  .menu{
+  .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,13 +21,13 @@
     transition: all 8s ease-in-out;
 
     .menu_items {
-       margin-top: 160px;
+      margin-top: 160px;
 
-      li{
-        margin: 0 auto 40px auto;
+      li {
+        margin: 0 auto 40px;
         width: 100%;
 
-        span{
+        span {
           display: inline-block;
           font-size: 0.8em;
           margin-left: 20px;
@@ -35,60 +35,60 @@
           color: $whiteColor;
         }
 
-        a{
+        a {
           display: inline-block;
           font-weight: bold;
           font-size: 1em;
           margin-left: 20px;
           color: $grayColor;
           cursor: pointer;
-          transition: all .3s linear;
+          transition: all 0.3s linear;
 
-          &:hover{
+          &:hover {
             color: $whiteColor;
             border-bottom: 1px solid $whiteColor;
             padding-bottom: 1px;
           }
-
         }
+      }
+      //end li
+    }
+    //end menu-items
 
-      }//end li
-
-    }//end menu-items
-
-    .menu_bottom{
+    .menu_bottom {
       width: 160px;
       text-align: center;
 
-      h6{
+      h6 {
         font-size: 0.6em;
         font-weight: bold;
         color: $whiteColor;
         text-transform: uppercase;
         margin-bottom: 20px;
-      }//h6
+      }
+      //h6
 
       .menu_icons {
         margin-bottom: 60px;
 
-        li{
+        li {
           display: inline-block;
           margin-right: 14px;
         }
+      }
+      //end menu-icons
 
-      }//end menu-icons
-
-      .menu_bottom_text{
+      .menu_bottom_text {
         font-size: 0.73em;
         width: 100%;
       }
+    }
+    //end menu-bottom
+  }
+  // end menu
 
-    }//end menu-bottom
-
-  }// end menu
-
-  &.open{
+  &.open {
     transform: translateX(0%);
   }
-
-}//end menu-wrapper
+}
+//end menu-wrapper
